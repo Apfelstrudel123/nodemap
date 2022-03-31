@@ -1,3 +1,15 @@
-## Rough roadmap of features, tasks and 
+## **Rough roadmap of features and tasks**
 
-<span style="color:blue">some *blue* text</span>.
+### **Done**:
+- Base idea
+
+### **Ongoing**:
+- Planning
+
+### **Planned**:
+- Standalone Qt version
+- Web version (non-public)
+- Serverside
+
+### **Under Consideration:**
+- Extensions & Integrations (Calendars etc,)
