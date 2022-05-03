@@ -2,6 +2,7 @@
 #include <QObject>
 #include <QPlainTextEdit>
 #include <QApplication>
+#include "aboutdialog.h"
 
 namespace UI
 {
@@ -25,5 +26,6 @@ namespace UI
 
     private:
         QPlainTextEdit* console;
+        AboutDialog* about_dlg;
     };
 }

@@ -58,6 +58,16 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
   </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\ui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\ui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
     <ClCompile>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -85,8 +95,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ui\aboutdialog.cpp" />
     <ClCompile Include="ui\menubar.cpp" />
     <ClCompile Include="nodes\node.cpp" />
+    <QtUic Include="ui\aboutdialog.ui" />
     <QtUic Include="ui\mainwindow.ui" />
     <QtMoc Include="ui\mainwindow.h" />
     <ClCompile Include="io\io.cpp" />
@@ -96,8 +108,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="io\io.h" />
+    <QtMoc Include="ui\aboutdialog.h" />
     <QtMoc Include="nodes\node.h" />
     <QtMoc Include="ui\menubar.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="resource.qrc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

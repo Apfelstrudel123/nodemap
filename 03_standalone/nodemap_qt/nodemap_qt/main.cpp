@@ -5,8 +5,9 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    
+    QApplication app(argc, argv);
+    app.setStyle("fusion");
+
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();
     for (const QString& locale : uiLanguages)
@@ -14,12 +15,12 @@ int main(int argc, char *argv[])
         const QString baseName = "nodemap_qt_" + QLocale(locale).name();
         if (translator.load(":/i18n/" + baseName))
         {
-            a.installTranslator(&translator);
+            app.installTranslator(&translator);
             break;
         }
     }
 
     UI::MainWindow w;
     w.show();
-    return a.exec();
+    return app.exec();
 }

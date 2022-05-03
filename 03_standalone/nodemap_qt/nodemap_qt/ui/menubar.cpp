@@ -7,6 +7,7 @@ namespace UI
     Menubar::Menubar(QPlainTextEdit* _console, QObject* parent) : QObject{ parent }
     {
         console = _console;
+        about_dlg = nullptr;
     }
 
     void Menubar::create_project()
@@ -33,6 +34,10 @@ namespace UI
 
     void Menubar::about()
     {
-
+        console->appendPlainText("Opening about dialog...");
+        if (about_dlg == nullptr)
+            about_dlg = new AboutDialog();
+        about_dlg->show();
+        about_dlg->raise();
     }
 }

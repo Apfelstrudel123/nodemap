@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-nodemap_qt",
+      "appliesTo": "03_standalone/nodemap_qt/nodemap_qt.sln",
+      "type": "launch"
+    }
+  ]
+}

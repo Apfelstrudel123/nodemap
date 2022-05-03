@@ -32,12 +32,12 @@
     <ClCompile Include="ui\mainwindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <None Include="nodemap_qt.ico">
-      <Filter>Resource Files</Filter>
-    </None>
     <ResourceCompile Include="nodemap_qt.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+    <QtUic Include="ui\aboutdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -50,6 +50,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="nodes\node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\aboutdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,5 +68,13 @@
     <QtMoc Include="nodes\node.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="ui\aboutdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="resource.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
   </ItemGroup>
 </Project>
