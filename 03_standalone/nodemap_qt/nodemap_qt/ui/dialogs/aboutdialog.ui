@@ -39,7 +39,7 @@
     <normaloff>:/icon/icons/icon.png</normaloff>:/icon/icons/icon.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(20, 20, 20);</string>
+   <string notr="true">background-color: rgb(36, 36, 36);</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

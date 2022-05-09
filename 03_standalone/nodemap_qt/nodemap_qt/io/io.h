@@ -1,28 +1,26 @@
 #pragma once
-#include <QJsonDocument>
 #include <QJsonObject>
-#include <QFile>
-#include <QFileDialog>
+#include "../nodes/graph.h"
 
-QT_BEGIN_NAMESPACE
 namespace IO
 {
-    struct ProjectData;
+    struct ProjectData
+    {
+        //Metadata
+        QString version = "0.0.1";
+        QString path = "untitled.nmp";
+        //Body
+        QString users = "none";
+        //Nodes
+
+        QList<Graph> graphs;
+    };
 
     ProjectData* open_project();
     QJsonObject* read_project(const QString& path);
     ProjectData* read_data(const QJsonObject& json);
-    void save_project(ProjectData* project);
+    QString read_string(const QJsonObject& json, const QString& key, const QString& def = QStringLiteral(""));
+    bool save_project(ProjectData* project);
 
-    struct ProjectData
-    {
-        //Metadata
-        QString name;
-        QString version;
-        QString path;
-        //Body
-        QString* users;
-        //Nodes
-    };
+    void head_to_json(const ProjectData& project, QJsonObject* obj);
 }
-QT_END_NAMESPACE

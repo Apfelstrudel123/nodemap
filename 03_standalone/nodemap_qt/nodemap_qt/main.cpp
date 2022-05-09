@@ -1,4 +1,4 @@
-#include "ui/mainwindow.h"
+#include "ui/mainwindow/mainwindow.h"
 #include <QtWidgets/QApplication>
 #include <QLocale>
 #include <QTranslator>
@@ -7,6 +7,10 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     app.setStyle("fusion");
+
+    QCoreApplication::setOrganizationName("Tom Russ");
+    QCoreApplication::setOrganizationDomain("mirai-ware.com");
+    QCoreApplication::setApplicationName("Nodemap");
 
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();
@@ -21,6 +25,7 @@ int main(int argc, char *argv[])
     }
 
     UI::MainWindow w;
+    w.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     w.show();
     return app.exec();
 }

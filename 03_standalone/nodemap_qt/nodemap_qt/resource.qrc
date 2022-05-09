@@ -1,5 +1,9 @@
 <RCC>
     <qresource prefix="/icon">
         <file>icons/icon.png</file>
+        <file>icons/win_min.png</file>
+        <file>icons/win_close.png</file>
+        <file>icons/win_max.png</file>
+        <file>icons/win_restore.png</file>
     </qresource>
 </RCC>

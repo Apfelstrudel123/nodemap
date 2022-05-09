@@ -60,12 +60,12 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.\ui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\ui;.\ui\work_view;.\nodes;.\ui\mainwindow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.\ui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\ui;.\ui\work_view;.\nodes;.\ui\mainwindow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -95,25 +95,42 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ui\aboutdialog.cpp" />
-    <ClCompile Include="ui\menubar.cpp" />
+    <ClCompile Include="nodes\graph.cpp" />
+    <ClCompile Include="settings\settings.cpp" />
+    <ClCompile Include="ui\dialogs\aboutdialog.cpp" />
+    <ClCompile Include="ui\mainwindow\console.cpp" />
+    <ClCompile Include="ui\mainwindow\inspector.cpp" />
+    <ClCompile Include="ui\mainwindow\titlebar.cpp" />
     <ClCompile Include="nodes\node.cpp" />
-    <QtUic Include="ui\aboutdialog.ui" />
-    <QtUic Include="ui\mainwindow.ui" />
-    <QtMoc Include="ui\mainwindow.h" />
+    <ClCompile Include="ui\mainwindow\sidebar.cpp" />
+    <QtUic Include="nodes\graph.ui" />
+    <QtUic Include="ui\dialogs\aboutdialog.ui" />
+    <QtUic Include="ui\mainwindow\console.ui" />
+    <QtUic Include="ui\mainwindow\inspector.ui" />
+    <QtUic Include="ui\mainwindow\mainwindow.ui" />
+    <QtMoc Include="ui\mainwindow\mainwindow.h" />
     <ClCompile Include="io\io.cpp" />
-    <ClCompile Include="ui\mainwindow.cpp" />
+    <ClCompile Include="ui\mainwindow\mainwindow.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="ui\mainwindow\sidebar.ui" />
+    <QtUic Include="ui\mainwindow\titlebar.ui" />
     <ResourceCompile Include="nodemap_qt.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="io\io.h" />
-    <QtMoc Include="ui\aboutdialog.h" />
+    <QtMoc Include="ui\mainwindow\console.h" />
+    <QtMoc Include="ui\mainwindow\sidebar.h" />
+    <QtMoc Include="ui\dialogs\aboutdialog.h" />
     <QtMoc Include="nodes\node.h" />
-    <QtMoc Include="ui\menubar.h" />
+    <QtMoc Include="ui\mainwindow\titlebar.h" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="resource.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="io\io.h" />
+    <QtMoc Include="ui\mainwindow\inspector.h" />
+    <QtMoc Include="nodes\graph.h" />
+    <ClInclude Include="settings\settings.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

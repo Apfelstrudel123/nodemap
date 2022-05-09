@@ -23,19 +23,34 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="ui\mainwindow.ui">
+    <QtUic Include="ui\mainwindow\mainwindow.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="ui\mainwindow.h">
+    <QtMoc Include="ui\mainwindow\mainwindow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClCompile Include="ui\mainwindow.cpp">
+    <ClCompile Include="ui\mainwindow\mainwindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ResourceCompile Include="nodemap_qt.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
-    <QtUic Include="ui\aboutdialog.ui">
+    <QtUic Include="ui\dialogs\aboutdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\mainwindow\sidebar.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\mainwindow\console.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="nodes\graph.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\mainwindow\inspector.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\mainwindow\titlebar.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -46,29 +61,51 @@
     <ClCompile Include="io\io.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ui\menubar.cpp">
+    <ClCompile Include="ui\mainwindow\titlebar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="nodes\node.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ui\aboutdialog.cpp">
+    <ClCompile Include="ui\dialogs\aboutdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\mainwindow\sidebar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\mainwindow\console.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="settings\settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\graph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\mainwindow\inspector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="io\io.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <QtMoc Include="ui\menubar.h">
+    <QtMoc Include="ui\mainwindow\titlebar.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="nodes\node.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="ui\aboutdialog.h">
+    <QtMoc Include="ui\dialogs\aboutdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ui\mainwindow\sidebar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ui\mainwindow\console.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="nodes\graph.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ui\mainwindow\inspector.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -76,5 +113,13 @@
     <QtRcc Include="resource.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="io\io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="settings\settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
